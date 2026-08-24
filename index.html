@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0f9d4a"><title>MargueriteMarket — Caisse</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="topbar"><div class="brand"><span class="flower">🌼</span><div><strong>MargueriteMarket</strong><small>CAISSE 01 · PAPETERIE</small></div></div><div class="clock" id="clock"></div></header>
+<main class="layout"><section class="register">
+<div class="panel scanner"><div class="panel-title">🛒 Nouvelle vente</div><div class="entry"><input id="codeInput" inputmode="numeric" autocomplete="off" placeholder="Entrer le code produit…" autofocus><button id="addBtn" class="primary">AJOUTER</button></div><div id="message" class="message">Prêt à scanner.</div></div>
+<div class="panel cart-panel"><div class="panel-title">🧾 Articles</div><div id="cart" class="cart empty">Aucun article dans le panier.</div></div>
+</section>
+<aside class="checkout panel"><div class="checkout-head">TOTAL</div><div id="total" class="total">0,00 €</div><div class="summary"><div><span>Articles</span><strong id="itemCount">0</strong></div><div><span>Sous-total</span><strong id="subtotal">0,00 €</strong></div></div><button id="payBtn" class="pay" disabled>💳 PAYER</button><button id="cancelBtn" class="secondary">ANNULER LA VENTE</button></aside></main>
+
+<section id="paymentModal" class="modal hidden"><div class="modal-card"><button class="close" id="closePayment">×</button><div class="payment-logo">🌼</div><h2>Paiement</h2><div id="paymentTotal" class="payment-total">0,00 €</div>
+<div class="methods"><button data-method="Carte bancaire">💳 Carte bancaire</button><button data-method="Sans contact">📱 Sans contact</button><button data-method="Espèces">💶 Espèces</button></div>
+<div class="loyalty-box"><div class="loyalty-title">🌼 Carte fidélité MargueriteMarket</div><div class="loyalty-entry"><input id="loyaltyInput" inputmode="numeric" placeholder="Numéro de carte fidélité (facultatif)"><button id="loyaltyBtn" type="button">AJOUTER</button></div><div id="loyaltyStatus" class="loyalty-status">Aucune carte enregistrée.</div></div>
+<div id="cashArea" class="cash-area hidden"><label>Montant reçu</label><input id="cashInput" type="number" min="0" step="0.01" placeholder="0,00"><div id="change" class="change"></div></div>
+<button id="confirmPay" class="confirm" disabled>CONFIRMER LE PAIEMENT</button><div id="paymentStatus" class="status"></div></div></section>
+
+<section id="receiptModal" class="modal hidden"><div class="receipt-card"><div id="receipt"></div><button id="newSale" class="primary wide">NOUVELLE VENTE</button></div></section>
+<script src="products.js"></script><script src="app.js"></script></body></html>
