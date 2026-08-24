@@ -53,6 +53,25 @@
         <button data-method="Sans contact">📱 Sans contact</button>
         <button data-method="Espèces">💶 Espèces</button>
       </div>
+      <div class="loyalty-box">
+  <div class="loyalty-title">🌼 Carte fidélité MargueriteMarket</div>
+
+  <div class="loyalty-entry">
+    <input
+      id="loyaltyInput"
+      inputmode="numeric"
+      placeholder="Numéro de carte fidélité"
+    >
+
+    <button id="loyaltyBtn" type="button">
+      AJOUTER
+    </button>
+  </div>
+
+  <div id="loyaltyStatus" class="loyalty-status">
+    Aucune carte enregistrée.
+  </div>
+</div>
       <div id="cashArea" class="cash-area hidden">
         <label>Montant reçu</label>
         <input id="cashInput" type="number" min="0" step="0.01" placeholder="0,00">
